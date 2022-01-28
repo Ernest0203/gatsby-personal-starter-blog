@@ -12,7 +12,7 @@ This is the search-enabled version of Gatsby Personal Starter Blog!
 
     ```sh
     # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/thomaswang/gatsby-personal-starter-blog
+    gatsby new my-blog-starter https://github.com/Ernest0203/gatsby-personal-starter-blog
     ```
 
 1.  **Start developing.**
