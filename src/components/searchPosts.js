@@ -57,7 +57,7 @@ const SearchedPosts = ({ results }) =>
               marginBottom: rhythm(1 / 4),
             }}
           >
-            <Link style={{ boxShadow: `none` }} to={`/blog${slug}`}>
+            <Link style={{ boxShadow: `none` }} to={`blog${slug}`}>
               {title}
             </Link>
           </h3>
@@ -81,13 +81,15 @@ const AllPosts = ({ posts }) => (
     {posts.map(({ node }) => {
       const title = node.frontmatter.title || node.fields.slug
       return (
-        <div key={node.fields.slug}>
+        <div 
+          key={node.fields.slug}
+        >
           <h3
             style={{
               marginBottom: rhythm(1 / 4),
             }}
           >
-            <Link style={{ boxShadow: `none` }} to={`/blog${node.fields.slug}`}>
+            <Link style={{ boxShadow: `none`, color: 'rgb(34, 198, 202)' }} to={`blog${node.fields.slug}`}>
               {title}
             </Link>
           </h3>
@@ -115,7 +117,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
 
   return (
     <>
-      <SearchBar>
+      {/* <SearchBar>
         <svg
           focusable="false"
           xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +137,7 @@ const SearchPosts = ({ posts, localSearchBlog, location, navigate }) => {
             setQuery(e.target.value)
           }}
         />
-      </SearchBar>
+      </SearchBar> */}
       {query ? <SearchedPosts results={results} /> : <AllPosts posts={posts} />}
     </>
   )
