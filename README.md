@@ -20,7 +20,7 @@ This is the search-enabled version of Gatsby Personal Starter Blog!
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd my-blog-starter/
+    npm i -g gatsby-cli
     gatsby develop
     ```
 
